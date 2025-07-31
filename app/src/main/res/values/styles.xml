@@ -1,0 +1,6 @@
+<resources>
+    <style name="CircleShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item> <!-- 圆形效果 -->
+    </style>
+</resources>
