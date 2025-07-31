@@ -15,8 +15,11 @@ The ergonomic ear-worn design ensures long-term comfort and convenience. In addi
 
 ## Tech Stack
 Java / Kotlin (Android)
+
 Python (for audio signal processing)
+
 Android Studio
+
 Git / GitHub
 
 ## Project Structure
