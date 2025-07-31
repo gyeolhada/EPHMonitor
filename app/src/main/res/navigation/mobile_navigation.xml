@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.ephmonitor.ui.login.LoginFragment"
+        android:label="login"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_loginFragment_to_navigation_main"
+            app:destination="@id/navigation_main" />
+    </fragment>
+
+    <navigation android:id="@+id/navigation_main"
+        app:startDestination="@id/navigation_home">
+        <fragment
+            android:id="@+id/navigation_home"
+            android:name="com.example.ephmonitor.ui.home.HomeFragment"
+            android:label="@string/title_home"
+            tools:layout="@layout/fragment_home" >
+            <action
+                android:id="@+id/action_navigation_home_to_exerciseFragment"
+                app:destination="@id/exerciseFragment" />
+            <action
+                android:id="@+id/action_navigation_home_to_abnormalHeartFragment"
+                app:destination="@id/abnormalHeartFragment" />
+            <action
+                android:id="@+id/action_navigation_home_to_abnormalBreathFragment"
+                app:destination="@id/abnormalBreathFragment" />
+            <action
+                android:id="@+id/action_navigation_home_to_navFragment"
+                app:destination="@id/navFragment" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/exerciseFragment"
+            android:name="com.example.ephmonitor.ui.exercise.ExerciseFragment"
+            android:label="Exercise"
+            tools:layout="@layout/fragment_exercise">
+            <argument
+                android:name="selectedType"
+                app:argType="string" />
+            <argument
+                android:name="selectedTime"
+                app:argType="string" />
+            <action
+                android:id="@+id/action_exerciseFragment_to_navigation_home"
+                app:destination="@id/navigation_home" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/navigation_mine"
+            android:name="com.example.ephmonitor.ui.mine.MineFragment"
+            android:label="Mine"
+            tools:layout="@layout/fragment_mine" >
+            <action
+                android:id="@+id/action_navigation_mine_to_historyFragment"
+                app:destination="@id/historyFragment" />
+            <action
+                android:id="@+id/action_navigation_mine_to_loginFragment"
+                app:destination="@id/loginFragment" />
+            <action
+                android:id="@+id/action_navigation_mine_to_mineEditFragment"
+                app:destination="@id/mineEditFragment" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/historyFragment"
+            android:name="com.example.ephmonitor.ui.history.HistoryFragment"
+            android:label="History"
+            tools:layout="@layout/fragment_history" >
+            <argument
+                android:name="record"
+                app:argType="com.example.ephmonitor.room.entity.Record" />
+            <action
+                android:id="@+id/action_historyFragment_to_navigation_mine"
+                app:destination="@id/navigation_mine" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/mineEditFragment"
+            android:name="com.example.ephmonitor.ui.mine.MineEditFragment"
+            android:label="MineEdit"
+            tools:layout="@layout/fragment_mine_edit" >
+            <action
+                android:id="@+id/action_mineEditFragment_to_navigation_mine"
+                app:destination="@id/navigation_mine" />
+            <action
+                android:id="@+id/action_mineEditFragment_to_loginFragment"
+                app:destination="@id/loginFragment" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/navigation_connect"
+            android:name="com.example.ephmonitor.ui.connect.ConnectFragment"
+            android:label="Connect"
+            tools:layout="@layout/fragment_connect" />
+        <fragment
+            android:id="@+id/navigation_music"
+            android:name="com.example.ephmonitor.ui.music.MusicFragment"
+            android:label="Connect"
+            tools:layout="@layout/fragment_music" />
+    </navigation>
+    <fragment
+        android:id="@+id/abnormalBreathFragment"
+        android:name="com.example.ephmonitor.ui.abnormal.AbnormalBreathFragment"
+        android:label="AbnormalBreathFragment" >
+        <action
+            android:id="@+id/action_abnormalBreathFragment_to_navigation_home"
+            app:destination="@id/navigation_main" />
+    </fragment>
+    <fragment
+        android:id="@+id/abnormalHeartFragment"
+        android:name="com.example.ephmonitor.ui.abnormal.AbnormalHeartFragment"
+        android:label="AbnormalHeartFragment" >
+        <action
+            android:id="@+id/action_abnormalHeartFragment_to_navigation_home"
+            app:destination="@id/navigation_main" />
+    </fragment>
+    <fragment
+        android:id="@+id/navFragment"
+        android:name="com.example.ephmonitor.ui.home.NavFragment"
+        android:label="NavFragment" >
+        <action
+            android:id="@+id/action_navFragment_to_navigation_home"
+            app:destination="@id/navigation_main" />
+    </fragment>
+    <fragment
+        android:id="@+id/musicFragment"
+        android:name="com.example.ephmonitor.ui.music.MusicFragment"
+        android:label="MusicFragment"
+        tools:layout="@layout/fragment_music">
+        <action
+            android:id="@+id/action_musicFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>
