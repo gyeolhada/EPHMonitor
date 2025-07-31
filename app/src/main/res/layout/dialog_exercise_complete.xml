@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/sportType_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="运动类型:"
+        android:textStyle="bold"
+        android:layout_marginLeft="50dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/duration_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="运动时长:"
+        android:textStyle="bold"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/startTime_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始时间:"
+        android:textStyle="bold"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/endTime_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="结束时间:"
+        android:textStyle="bold"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/sportDate_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="运动日期:"
+        android:textStyle="bold"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/cancel"
+            android:id="@+id/cancelDialog"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/transparent"/>
+        <!--        <Button-->
+<!--            android:id="@+id/cancelDialog"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:drawableBottom="@drawable/cancel"-->
+<!--            android:gravity="center"-->
+<!--            android:padding=""-->
+<!--            android:text="关闭"-->
+    </LinearLayout>
+
+
+</LinearLayout>
