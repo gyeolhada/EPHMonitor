@@ -21,14 +21,25 @@ Git / GitHub
 
 ## Project Structure
 app/
+
 ├── src/
+
 │   ├── main/
+
 │   │   ├── java/         - Core Code
+
 │   │   ├── python/       - Algorithm Execution *(not publicly available)*  
+
 │   │   ├── res/          - Resource Files
+
 │   │   └── AndroidManifest.xml
+
 │   ├── test/
+
 │   ├── androidTest/
+
 ├── build.gradle.kts
+
 build.gradle.kts
+
 README.md
