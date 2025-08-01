@@ -1,1 +1,1 @@
-Can’t present all because of confidential algorithm
+Python code for algorithm models (confidential)
